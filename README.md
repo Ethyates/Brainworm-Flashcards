@@ -27,7 +27,7 @@
 
 ## Live Demo
 
-*(GitHub Pages link here)*
+[*(GitHub Pages link here)*](https://ethyates.github.io/Brainworm-Flashcards/)
 
 ---
 
