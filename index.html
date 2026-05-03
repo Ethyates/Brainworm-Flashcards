@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brainworm Flashcards</title>
+  <link rel="stylesheet" href="css/brainworm.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Brainworm Flashcards</h1>
+    <p>A study tool that helps the knowledge burrow in.</p>
+
+    <nav class="app-nav">
+      <button data-section="create-section">Create</button>
+      <button data-section="library-section">Library</button>
+      <button data-section="study-section">Study</button>
+    </nav>
+  </header>
+
+  <main class="app-container">
+
+    <!-- Create Card Section -->
+    <section id="create-section" class="app-section">
+      <h2>Create a Flashcard</h2>
+
+      <form id="card-form">
+        <label for="question-input">Question</label>
+        <textarea id="question-input" placeholder="Enter the question"></textarea>
+
+        <label for="answer-input">Answer</label>
+        <textarea id="answer-input" placeholder="Enter the answer"></textarea>
+
+        <label for="category-input">Category</label>
+        <input id="category-input" type="text" placeholder="Example: JavaScript" />
+
+        <button type="submit" id="save-card-btn">Add Card</button>
+      </form>
+
+      <p id="form-message" class="message"></p>
+    </section>
+
+    <!-- Library Section -->
+    <section id="library-section" class="app-section">
+      <h2>Card Library</h2>
+
+      <div class="library-controls">
+        <input id="search-input" type="text" placeholder="Search cards..." />
+
+        <select id="category-filter">
+          <option value="all">All Categories</option>
+        </select>
+      </div>
+
+      <div id="card-list" class="card-list">
+        <!-- Cards render here with JS -->
+      </div>
+    </section>
+
+    <!-- Study Section -->
+    <section id="study-section" class="app-section">
+      <h2>Study Mode</h2>
+
+      <div id="study-setup" class="study-panel">
+        <label for="study-category">Choose a category</label>
+
+        <select id="study-category">
+          <option value="all">All Categories</option>
+        </select>
+
+        <button id="start-study-btn">Start Study Session</button>
+        <p id="study-start-message" class="message"></p>
+      </div>
+
+      <div id="study-card-area" class="study-panel hidden">
+        <p id="study-progress">Card 1 of 1</p>
+
+      <div id="study-card" class="study-card">
+        <div class="card-inner" id="card-inner">
+        
+          <div class="card-front">
+             <h3>Question</h3>
+             <p id="question-text"></p>
+          </div>
+        
+          <div class="card-back">
+             <h3>Answer</h3>
+             <p id="answer-text"></p>
+          </div>
+        
+          </div>
+        </div>
+
+        <div class="study-actions">
+          <button id="flip-card-btn">Flip Card</button>
+          <button id="correct-btn">Correct</button>
+          <button id="incorrect-btn">Incorrect</button>
+        </div>
+      </div>
+
+      <div id="results-area" class="study-panel hidden">
+        <h3>Session Complete</h3>
+        <p id="results-text"></p>
+
+        <div class="study-actions">
+          <button id="review-missed-btn">Review Missed Cards</button>
+          <button id="study-again-btn">Study Again</button>
+          <button id="return-library-btn">Return to Library</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="app-footer">
+    <p>Brainworm Flashcards</p>
+  </footer>
+
+  <script src="js/brainworm.js"></script>
+</body>
+</html>
